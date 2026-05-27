@@ -13,8 +13,25 @@ let controlsTimeout;
 document.addEventListener("DOMContentLoaded", () => {
   setupPlayerSync();
   setupControlAutohide();
+  setupFullscreenChange();
   loadPlaylist();
 });
+
+/* DETECT NATIVE FULLSCREEN EXIT TO UNLOCK ORIENTATION */
+function setupFullscreenChange() {
+  const events = ["fullscreenchange", "webkitfullscreenchange", "mozfullscreenchange", "MSFullscreenChange"];
+  events.forEach(event => {
+    document.addEventListener(event, () => {
+      const isFullscreen = document.fullscreenElement || 
+                           document.webkitFullscreenElement || 
+                           document.mozFullScreenElement || 
+                           document.msFullscreenElement;
+      if (!isFullscreen) {
+        unlockOrientation();
+      }
+    });
+  });
+}
 
 /* SYNC VIDEO STATE WITH PLAY/PAUSE BUTTON */
 function setupPlayerSync() {
@@ -434,33 +451,74 @@ function getFallbackGradient(name) {
   return gradients[index];
 }
 
-/* TOGGLE FULLSCREEN WITH MULTI-DEVICE SUPPORT */
+/* TOGGLE FULLSCREEN WITH MULTI-DEVICE & AUTO-LANDSCAPE SUPPORT */
 function toggleFullscreen() {
   const video = document.getElementById("video");
   
-  if (video.requestFullscreen) {
-    if (!document.fullscreenElement) {
-      video.requestFullscreen().catch(err => {
-        console.error("Error attempting to enable fullscreen:", err);
-      });
-    } else {
-      document.exitFullscreen();
-    }
-  } else if (video.webkitRequestFullscreen) { /* Chrome/Safari/Opera on Desktop/Android */
-    if (!document.webkitFullscreenElement) {
+  if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+    // Enter Fullscreen
+    if (video.requestFullscreen) {
+      video.requestFullscreen()
+        .then(() => {
+          lockOrientation();
+        })
+        .catch(err => {
+          console.error("Error entering fullscreen:", err);
+        });
+    } else if (video.webkitRequestFullscreen) { /* Chrome/Safari on Desktop/Android */
       video.webkitRequestFullscreen();
-    } else {
-      document.webkitExitFullscreen();
-    }
-  } else if (video.msRequestFullscreen) { /* IE/Edge */
-    if (!document.msFullscreenElement) {
+      setTimeout(lockOrientation, 150);
+    } else if (video.msRequestFullscreen) { /* IE/Edge */
       video.msRequestFullscreen();
+      setTimeout(lockOrientation, 150);
+    } else if (video.webkitEnterFullscreen) { /* iOS (iPhone) Support */
+      // iOS webkitEnterFullscreen natively takes over screen and handles auto-rotation
+      video.webkitEnterFullscreen();
     } else {
+      alert("Fullscreen is not supported on this browser or device.");
+    }
+  } else {
+    // Exit Fullscreen
+    unlockOrientation();
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
       document.msExitFullscreen();
     }
-  } else if (video.webkitEnterFullscreen) { /* iOS (iPhone) Support */
-    video.webkitEnterFullscreen();
-  } else {
-    alert("Fullscreen is not supported on this browser or device.");
+  }
+}
+
+/* LOCK ORIENTATION TO LANDSCAPE */
+function lockOrientation() {
+  if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock("landscape")
+      .catch(err => {
+        console.log("Landscape lock failed or not supported on this device:", err);
+      });
+  } else if (screen.lockOrientation) {
+    screen.lockOrientation("landscape");
+  } else if (screen.webkitLockOrientation) {
+    screen.webkitLockOrientation("landscape");
+  } else if (screen.mozLockOrientation) {
+    screen.mozLockOrientation("landscape");
+  } else if (screen.msLockOrientation) {
+    screen.msLockOrientation("landscape");
+  }
+}
+
+/* UNLOCK ORIENTATION */
+function unlockOrientation() {
+  if (screen.orientation && screen.orientation.unlock) {
+    screen.orientation.unlock();
+  } else if (screen.unlockOrientation) {
+    screen.unlockOrientation();
+  } else if (screen.webkitUnlockOrientation) {
+    screen.webkitUnlockOrientation();
+  } else if (screen.mozUnlockOrientation) {
+    screen.mozUnlockOrientation();
+  } else if (screen.msUnlockOrientation) {
+    screen.msUnlockOrientation();
   }
 }
