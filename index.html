@@ -13,6 +13,9 @@
     <!-- HLS Player Library -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
     <!-- Custom Style -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -44,10 +47,10 @@
 
           <!-- Custom Control Bar Overlay -->
           <div class="custom-controls" id="customControls">
-            <button class="control-btn" onclick="prevChannel()" title="Previous Channel">⏮</button>
-            <button class="control-btn play-pause-btn" onclick="togglePlay()" title="Play/Pause">⏯</button>
-            <button class="control-btn" onclick="nextChannel()" title="Next Channel">⏭</button>
-            <button class="control-btn" onclick="toggleFullscreen()" title="Fullscreen">⛶</button>
+            <button class="control-btn" onclick="prevChannel()" title="Previous Channel"><i class="fa-solid fa-backward-step"></i></button>
+            <button class="control-btn play-pause-btn" onclick="togglePlay()" title="Play/Pause"><i class="fa-solid fa-play"></i></button>
+            <button class="control-btn" onclick="nextChannel()" title="Next Channel"><i class="fa-solid fa-forward-step"></i></button>
+            <button class="control-btn" onclick="toggleFullscreen()" title="Fullscreen"><i class="fa-solid fa-expand"></i></button>
           </div>
         </div>
 
@@ -76,22 +79,31 @@
         <!-- Search & Control Header -->
         <div class="search-filter-sticky">
           <div class="search-wrapper">
-            <span class="search-icon">🔍</span>
+            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
             <input
               type="text"
               id="search"
               placeholder="Search among all channels..."
               onkeyup="searchChannels()"
             />
-            <button class="clear-search-btn" id="clearSearch" onclick="clearSearchInput()" style="display: none;">✕</button>
+            <button class="clear-search-btn" id="clearSearch" onclick="clearSearchInput()" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
           </div>
 
           <!-- Category Pill Filter List -->
-          <div class="categories-container">
-            <div class="category-list" id="categoryList">
-              <button class="category-pill active" onclick="filterCategory('All')">All Channels</button>
-              <!-- Dynamic category pills will be inserted here -->
+          <div class="categories-wrapper">
+            <div class="categories-container" id="categoriesContainer">
+              <div class="category-list" id="categoryList">
+                <button class="category-pill active" onclick="filterCategory('All')">All Channels</button>
+                <!-- Dynamic category pills will be inserted here -->
+              </div>
             </div>
+            <!-- Scroll indicators -->
+            <button class="scroll-indicator scroll-left hidden" id="scrollLeftBtn" onclick="scrollCategories('left')" title="Scroll Left">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="scroll-indicator scroll-right" id="scrollRightBtn" onclick="scrollCategories('right')" title="Scroll Right">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
         </div>
 

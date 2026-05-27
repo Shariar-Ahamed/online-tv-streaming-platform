@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupPlayerSync();
   setupControlAutohide();
   setupFullscreenChange();
+  setupCategoryScrolling();
   loadPlaylist();
 });
 
@@ -63,11 +64,11 @@ function setupPlayerSync() {
   const playPauseBtn = document.querySelector(".play-pause-btn");
 
   video.addEventListener("play", () => {
-    playPauseBtn.innerHTML = "⏸";
+    playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
   });
 
   video.addEventListener("pause", () => {
-    playPauseBtn.innerHTML = "▶";
+    playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
   });
   
   video.addEventListener("ended", () => {
@@ -193,6 +194,12 @@ function renderCategories() {
     btn.onclick = (e) => filterCategory(cat, e.target);
     container.appendChild(btn);
   });
+
+  // Trigger scroll button state update after loading elements
+  const categoriesContainer = document.getElementById("categoriesContainer");
+  if (categoriesContainer) {
+    categoriesContainer.dispatchEvent(new Event("scroll"));
+  }
 }
 
 /* FILTER BY CATEGORY */
@@ -545,5 +552,57 @@ function unlockOrientation() {
     screen.mozUnlockOrientation();
   } else if (screen.msUnlockOrientation) {
     screen.msUnlockOrientation();
+  }
+}
+
+/* HORIZONTAL CATEGORY SCROLL INDICATORS & SMOOTH BUTTON NAVIGATION */
+function setupCategoryScrolling() {
+  const container = document.getElementById("categoriesContainer");
+  const leftBtn = document.getElementById("scrollLeftBtn");
+  const rightBtn = document.getElementById("scrollRightBtn");
+  const wrapper = document.querySelector(".categories-wrapper");
+  
+  if (!container || !leftBtn || !rightBtn || !wrapper) return;
+  
+  function updateScrollButtons() {
+    const scrollLeft = container.scrollLeft;
+    const scrollWidth = container.scrollWidth;
+    const clientWidth = container.clientWidth;
+    
+    // Toggle Left Indicator
+    if (scrollLeft <= 5) {
+      leftBtn.classList.add("hidden");
+      wrapper.classList.remove("scrolled-left");
+    } else {
+      leftBtn.classList.remove("hidden");
+      wrapper.classList.add("scrolled-left");
+    }
+    
+    // Toggle Right Indicator
+    if (scrollLeft + clientWidth >= scrollWidth - 5) {
+      rightBtn.classList.add("hidden");
+      wrapper.classList.add("scrolled-right");
+    } else {
+      rightBtn.classList.remove("hidden");
+      wrapper.classList.remove("scrolled-right");
+    }
+  }
+  
+  container.addEventListener("scroll", updateScrollButtons);
+  window.addEventListener("resize", updateScrollButtons);
+  
+  // Set initial state after rendering categories (using timeout to allow rendering)
+  setTimeout(updateScrollButtons, 500);
+}
+
+function scrollCategories(direction) {
+  const container = document.getElementById("categoriesContainer");
+  if (!container) return;
+  
+  const scrollAmount = 200;
+  if (direction === "left") {
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  } else {
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
   }
 }

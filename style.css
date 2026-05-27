@@ -458,7 +458,9 @@ video {
   top: 50%;
   transform: translateY(-50%);
   font-size: 18px;
-  color: var(--text-muted);
+  color: var(--text-secondary);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .search-wrapper input {
@@ -496,6 +498,7 @@ video {
   align-items: center;
   justify-content: center;
   transition: var(--transition-fast);
+  z-index: 2;
 }
 
 .clear-search-btn:hover {
@@ -504,14 +507,96 @@ video {
 }
 
 /* CATEGORIES CONTAINER & PILLS */
-.categories-container {
+.categories-wrapper {
+  position: relative;
   width: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+}
+
+.categories-wrapper::before,
+.categories-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity var(--transition-fast);
+}
+
+.categories-wrapper::before {
+  left: 40px;
+  background: linear-gradient(to right, var(--bg-dark), transparent);
+  opacity: 0;
+}
+
+.categories-wrapper::after {
+  right: 40px;
+  background: linear-gradient(to left, var(--bg-dark), transparent);
+}
+
+.categories-wrapper.scrolled-left::before {
+  opacity: 1;
+}
+
+.categories-wrapper.scrolled-right::after {
+  opacity: 0;
+}
+
+.categories-container {
+  flex: 1;
+  min-width: 0;
   overflow-x: auto;
   scrollbar-width: none; /* Hide standard scrollbar Firefox */
+  scroll-behavior: smooth;
 }
 
 .categories-container::-webkit-scrollbar {
   display: none; /* Hide standard scrollbar Chrome/Safari */
+}
+
+.scroll-indicator {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.scroll-indicator:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--primary);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.scroll-indicator.scroll-left {
+  left: 4px;
+}
+
+.scroll-indicator.scroll-right {
+  right: 4px;
+}
+
+.scroll-indicator.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.8);
 }
 
 .category-list {
@@ -789,6 +874,14 @@ video {
     border-bottom: none;
     padding: 20px 20px 10px 20px;
     margin-bottom: 15px;
+  }
+
+  .categories-wrapper {
+    padding: 0;
+  }
+
+  .scroll-indicator {
+    display: none !important;
   }
 
   .channels-grid-wrapper {
