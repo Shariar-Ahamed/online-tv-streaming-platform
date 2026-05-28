@@ -28,6 +28,10 @@
   <img src="https://img.shields.io/github/forks/Shariar-Ahamed/online-tv-streaming-platform?style=social">
 </p>
 
+<p align="center">
+<a href="https://wakatime.com/badge/user/c7433bc5-6f12-4c97-baea-430790fa608c/project/d5fc1849-63b0-4df6-8d52-fe8d5b2162e8"><img src="https://wakatime.com/badge/user/c7433bc5-6f12-4c97-baea-430790fa608c/project/d5fc1849-63b0-4df6-8d52-fe8d5b2162e8.svg" alt="wakatime"></a>
+</p>
+
 ---
 
 <p align="center">
