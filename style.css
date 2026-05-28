@@ -982,9 +982,7 @@ video {
   transition: opacity var(--transition-normal), transform var(--transition-normal) !important;
 }
 
-.player-wrapper:fullscreen:hover .custom-controls,
 .player-wrapper:fullscreen .custom-controls.visible,
-.player-wrapper:-webkit-full-screen:hover .custom-controls,
 .player-wrapper:-webkit-full-screen .custom-controls.visible {
   opacity: 1 !important;
   pointer-events: auto !important;

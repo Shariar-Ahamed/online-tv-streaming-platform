@@ -86,7 +86,7 @@ function setupControlAutohide() {
     clearTimeout(controlsTimeout);
     controlsTimeout = setTimeout(() => {
       controls.classList.remove("visible");
-    }, 3500);
+    }, 5000); // 5 seconds
   }
 
   playerWrapper.addEventListener("mousemove", showControls);
