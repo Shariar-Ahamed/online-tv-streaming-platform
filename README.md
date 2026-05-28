@@ -40,17 +40,13 @@
 
 ---
 
-# 🔗 Live Demo
+## 🚀 Live Demo
 
-<p align="center">
-  <a href="https://shariar-ahamed.github.io/online-tv-streaming-platform/">
-    <img src="https://img.shields.io/badge/🚀-Watch%20Now-0A84FF?style=for-the-badge">
-  </a>
-</p>
+🔴 **Live Preview:** [📺 Watch Nova TV Live](https://shariar-ahamed.github.io/online-tv-streaming-platform/)
 
 ---
 
-# 📱 Responsive Preview
+# 🖥️ Responsive Preview
 
 <!-- ## 💻 Desktop View
 
