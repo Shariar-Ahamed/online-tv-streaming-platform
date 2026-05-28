@@ -262,7 +262,7 @@ function renderChannels() {
         <div class="channel-card-fallback-avatar" style="background: ${fallbackGradient}">${initials}</div>
         <div class="channel-card-fallback-name">${ch.name}</div>
       </div>
-      ${ch.logo ? `<img src="${ch.logo}" alt="${ch.name}" onerror="handleCardLogoError(this, '${ch.name}')">` : ""}
+      ${ch.logo ? `<img src="${ch.logo}" alt="${ch.name}" loading="lazy" onerror="handleCardLogoError(this, '${ch.name}')">` : ""}
     `;
 
     div.onclick = () => playChannel(index);

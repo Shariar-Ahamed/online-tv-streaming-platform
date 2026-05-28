@@ -682,7 +682,7 @@ video {
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(var(--blur-amount));
+  /* Removed backdrop-filter to prevent scrolling lag with 100+ cards */
 }
 
 /* Subtle glow outline overlay */
