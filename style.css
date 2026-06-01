@@ -2,6 +2,7 @@
 :root {
   --font-primary: 'Outfit', sans-serif;
   --font-display: 'Space Grotesk', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
   
   /* Cyberpunk / Premium Glow Color Palette */
   --bg-dark: #07070a;
@@ -140,23 +141,70 @@ body {
   margin-bottom: 25px;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.2));
+  transition: all var(--transition-normal);
+  animation: logoIconFloat 4s ease-in-out infinite;
+}
+
+.brand-logo:hover {
+  animation-play-state: paused;
+  transform: scale(1.15) rotate(8deg);
+  filter: drop-shadow(0 8px 20px rgba(0, 242, 254, 0.5));
+}
+
+@keyframes logoIconFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.2));
+  }
+  50% {
+    transform: translateY(-5px) scale(1.03);
+    filter: drop-shadow(0 5px 15px rgba(0, 242, 254, 0.45));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.2));
+  }
+}
+
 .logo {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 34px;
-  letter-spacing: -1px;
-  background: linear-gradient(135deg, #fff 40%, #ff007f 100%);
+  font-family: var(--font-poppins);
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  background: linear-gradient(to right, #4285F4 0%, #EA4335 25%, #FBBC05 50%, #34A853 75%, #4285F4 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   text-transform: uppercase;
-  text-shadow: 0 0 40px rgba(255, 0, 127, 0.2);
+  filter: drop-shadow(0 0 10px rgba(66, 133, 244, 0.15));
+  animation: logoGradientFlow 5s linear infinite;
+}
+
+@keyframes logoGradientFlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .logo span {
-  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: transparent;
+  -webkit-text-fill-color: inherit;
   font-weight: 800;
 }
 

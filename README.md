@@ -1,11 +1,11 @@
-<h1 align="center">📺 Nova TV</h1>
+<h1 align="center">📺 Alpha TV</h1>
 
 <p align="center">
   Modern Online Live TV Streaming Platform
 </p>
 
 <p align="center">
-  <img src="https://i.postimg.cc/PfZ7Z99B/PC-Main-header.png" alt="Nova TV Banner">
+  <img src="https://i.postimg.cc/PfZ7Z99B/PC-Main-header.png" alt="Alpha TV Banner">
 </p>
 
 ---
@@ -43,7 +43,7 @@
 
 ## 🚀 Live Demo
 
-🔴 **Live Preview:** [📺 Watch Nova TV Live](https://shariar-ahamed.github.io/online-tv-streaming-platform/)
+🔴 **Live Preview:** [📺 Watch Alpha TV Live](https://shariar-ahamed.github.io/online-tv-streaming-platform/)
 
 ---
 
