@@ -1,6 +1,4 @@
 #EXTM3U
-#EXTINF:-1 ,TSports HD
-http://198.195.239.50:8095/Tsports/index.m3u8
 #EXTINF:-1 ,STAR SPORTS2
 http://198.195.239.50:8095/StarSports2/index.m3u8
 #EXTINF:-1 ,STAR SPORTS SELECT1 HD
@@ -33,8 +31,6 @@ http://198.195.239.50:8095/SonyTv/index.m3u8
 http://198.195.239.50:8095/StarPlus/index.m3u8
 #EXTINF:-1 ,STAR GOLD HD
 http://198.195.239.50:8095/StarGold/index.m3u8
-#EXTINF:-1 ,STAR MOVIES HD
-http://198.195.239.50:8095/StarMovies/index.m3u8
 #EXTINF:-1 ,ZEE TV HD
 http://198.195.239.50:8095/ZeeTV/index.m3u8
 #EXTINF:-1 ,DISCOVERY HD
@@ -73,8 +69,6 @@ https://liveh34.vtvprime.vn/hls/SCTV22/03.m3u8
 http://cdntv.online/low/9mlxywika2/56.m3u8
 #EXTINF:-1 ,TDM Desporto 🇲🇴
 http://cdn6.163189.xyz/163189/amty
-#EXTINF:-1 ,IDMANTV 🇹🇷
-https://str2.yodacdn.net/idman_300_to_small/tracks-v1a1/mono.m3u8
 #EXTINF:-1 ,MAX SPORT 4 🇧🇬
 http://77.46.130.252:99/maxsport4
 #EXTINF:-1 ,SKY SPORT LALIGA 🇲🇽
@@ -197,16 +191,12 @@ http://77.46.130.252:99/maxsport2
 http://77.46.130.252:99/maxsport3
 #EXTINF:-1 ,M4 Sport 🇭🇺
 http://46.149.191.217:9010/play/a017
-#EXTINF:-1 ,Sportdigital 🇩🇪
-https://jmp2.uk/stvp-ATAJ0500433A
 #EXTINF:-1 ,ZIGGO SPORT 2 HD 🇳🇱
 http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2561/index.m3u8
 #EXTINF:-1 ,ZIGGO SPORT 3 HD 🇳🇱
 http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2559/index.m3u8
 #EXTINF:-1 ,ZIGGO SPORT LIVE 🇳🇱
 http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2560/index.m3u8
-#EXTINF:-1 ,2TV Sport 🇳🇴
-https://tv.cdn.xsg.ge/gpb-2tv/index.m3u8
 #EXTINF:-1 ,ORF+ 🇦🇹
 http://212.186.45.34:9981/stream/channelid/906723447
 #EXTINF:-1 ,5 SPORT 🇮🇱
@@ -225,34 +215,18 @@ http://185.132.134.159:80/sport6/index.m3u8
 http://200.115.120.1:8000/play/ca016/index.m3u8
 #EXTINF:-1 ,CAZE TV 1 🇧🇷
 https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
-#EXTINF:-1 ,REAL MADRID TV 🇪🇸
-https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8
-#EXTINF:-1 ,BEIN SPORT EXTRA Ñ 🇪🇸
-https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
 #EXTINF:-1 ,ESPN 5 🇦🇷
 http://190.0.247.38:8000/play/a012
-#EXTINF:-1 ,TELECOSTA GUATEMALA 🇬🇹
-https://tv91.hostingnuclear.com:19360/telecosta/telecosta.m3u8
 #EXTINF:-1 ,WIN SPORT 🇨🇴
 http://190.0.247.38:8000/play/a068
 #EXTINF:-1 ,WIN SPORT 🇨🇴
 http://181.205.205.173:8888/play/a0h0/index.m3u8
-#EXTINF:-1 ,TELEMUNDO 🇲🇽
-https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8
-#EXTINF:-1 ,MTR Sports-1 🇬🇧
-https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8
 #EXTINF:-1 ,X SPORT 🇷🇺
 http://iptv.prosto.tv:7000/ch109/video.m3u8
-#EXTINF:-1 ,Turkmenistan Sport 🇹🇲
-https://alpha.tv.online.tm/legacyhls/ch004_720/index.m3u8
 #EXTINF:-1 ,Turkmenistan Sport 🇹🇲
 http://217.174.225.146/legacyhls/ch004_720/index.m3u8
 #EXTINF:-1 ,SPORT ITALIA 🇮🇹
 https://amg01370-italiansportcom-sportitalia-rakuten-3hmdb.amagi.tv/amRdirect/ads_pod_type=playerpage_midroll&ads_env=prod&ads_ppid=&ads_rtvid=271861&ads_streaming_id=4f185419-74f6-4564-8ea9-4cdc60746e2f&ads_amagi_channel=781&ads_device_type=web&ads_device_model=&ads_device_year=&ads_player_width=&ads_rtv_content_language=ita&ads_market=it&ads_rtv_content_id=3741&ads_device_make=&ads_user_type=visitor&ads_content_classification=6&ads_gdpr_consent=&ads_device_lmt=1&ads_player_height=&uid=1gnmqg5gu-qsvc-bfo-gaq3-3dgjgexshpe/hls/amagi_hls_data_rakutenAA-sportitalia-rakuten/CDN/1920x1080_4540800/chunklist.m3u8
-#EXTINF:-1 ,TR Sport (480p) 🇮🇹
-https://livetr.teleromagna.it/mia/live/playlist.m3u8
-#EXTINF:-1 ,L`Equipe 🇫🇷
-https://jmp2.uk/stvp-FR200016Y5
 #EXTINF:-1 ,INFOSPORT 🇫🇷
 http://212.102.60.80/Infosport/index.m3u8
 #EXTINF:-1 ,ON Sports+ 🇭🇰
