@@ -41,17 +41,9 @@ jobs:
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug > build_debug.log 2>&1
-
-      - name: Upload Build Debug Log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: Build-Debug-Log
-          path: android/build_debug.log
+          ./gradlew assembleDebug
 
       - name: Upload APK Artifact
-        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: AlphaTV-App
