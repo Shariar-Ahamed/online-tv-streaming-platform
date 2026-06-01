@@ -35,7 +35,14 @@ jobs:
 
       - name: Sync Capacitor Android
         run: |
-          npx cap sync --verbose
+          npx cap sync --verbose > sync_debug.log 2>&1
+
+      - name: Upload Sync Debug Log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Sync-Debug-Log
+          path: sync_debug.log
 
       - name: Generate App Launcher Icons & Splash Screens
         run: |
