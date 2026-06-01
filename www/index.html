@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alpha TV - Premium Live Streaming</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo/Logo-PNG.png" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- HLS Player Library -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Animated background mesh -->
+    <div class="bg-mesh">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      <div class="glow-orb orb-3"></div>
+    </div>
+
+    <div class="app-container">
+      
+      <!-- LEFT SECTION: PLAYER & METADATA -->
+      <aside class="player-section">
+        <header class="header">
+          <div class="logo-container">
+            <img src="logo/Logo-PNG.png" alt="Alpha TV Logo" class="brand-logo" />
+            <h1 class="logo">Alpha <span>TV</span></h1>
+          </div>
+          
+          <!-- Mini Live Counter (Visible on mobile only) -->
+          <div class="header-live-badge">
+            <div class="header-stat-item">
+              <span class="header-ping"></span>
+              <i class="fa-solid fa-eye"></i>
+              <span id="headerLiveCount">--</span>
+            </div>
+            <div class="header-stat-divider"></div>
+            <div class="header-stat-item">
+              <i class="fa-solid fa-users"></i>
+              <span id="headerTotalCount">--</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="player-wrapper">
+          <div class="video-container">
+            <video id="video" autoplay controls playsinline></video>
+            
+            <!-- Neon Loading Spinner -->
+            <div id="playerLoader" class="player-loader hidden">
+              <div class="spinner"></div>
+              <span>Buffering stream...</span>
+            </div>
+          </div>
+
+          <!-- Custom Control Bar Overlay -->
+          <div class="custom-controls" id="customControls">
+            <button class="control-btn" onclick="prevChannel()" title="Previous Channel"><i class="fa-solid fa-backward-step"></i></button>
+            <button class="control-btn play-pause-btn" onclick="togglePlay()" title="Play/Pause"><i class="fa-solid fa-play"></i></button>
+            <button class="control-btn" onclick="nextChannel()" title="Next Channel"><i class="fa-solid fa-forward-step"></i></button>
+            <button class="control-btn" onclick="toggleFullscreen()" title="Fullscreen"><i class="fa-solid fa-expand"></i></button>
+          </div>
+        </div>
+
+        <!-- Current Channel Info Card -->
+        <div class="current-channel-card" id="currentChannelCard">
+          <div class="current-channel-logo-container">
+            <div id="currentChannelFallback" class="fallback-avatar hidden">N</div>
+            <img id="currentChannelLogo" src="" alt="" onerror="handleCurrentLogoError()">
+          </div>
+          <div class="current-channel-details">
+            <span class="live-badge">
+              <span class="live-dot"></span> LIVE
+            </span>
+            <h2 id="currentChannelTitle">Select a channel</h2>
+            <p id="currentChannelCategory">M3U Stream Player</p>
+          </div>
+        </div>
+
+        <!-- Stats Card -->
+        <div class="stats-card">
+          <div class="stat-item">
+            <div class="stat-icon-container live">
+              <i class="fa-solid fa-eye"></i>
+              <span class="stat-ping"></span>
+            </div>
+            <div class="stat-content">
+              <span class="stat-count" id="liveCount">--</span>
+              <span class="stat-desc">Live Watching</span>
+            </div>
+          </div>
+          
+          <div class="stat-divider"></div>
+          
+          <div class="stat-item">
+            <div class="stat-icon-container total">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-count" id="totalCount">--</span>
+              <span class="stat-desc">Total Visits</span>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          © 2026 <span class="accent-text">Alpha TV</span>. All rights reserved.
+        </footer>
+      </aside>
+
+      <!-- RIGHT SECTION: CHANNELS, FILTERS & SEARCH -->
+      <main class="channels-section">
+        <!-- Search & Control Header -->
+        <div class="search-filter-sticky">
+          <div class="search-wrapper">
+            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input
+              type="text"
+              id="search"
+              placeholder="Search among all channels..."
+              onkeyup="searchChannels()"
+            />
+            <button class="clear-search-btn" id="clearSearch" onclick="clearSearchInput()" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <!-- Category Pill Filter List -->
+          <div class="categories-wrapper">
+            <div class="categories-container" id="categoriesContainer">
+              <div class="category-list" id="categoryList">
+                <button class="category-pill active" onclick="filterCategory('All')">All Channels</button>
+                <!-- Dynamic category pills will be inserted here -->
+              </div>
+            </div>
+            <!-- Scroll indicators -->
+            <button class="scroll-indicator scroll-left hidden" id="scrollLeftBtn" onclick="scrollCategories('left')" title="Scroll Left">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="scroll-indicator scroll-right" id="scrollRightBtn" onclick="scrollCategories('right')" title="Scroll Right">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Channels Grid -->
+        <div class="channels-grid-wrapper">
+          <div class="channel-grid" id="channelGrid">
+            <!-- Dynamic channel cards will be inserted here -->
+          </div>
+          <div id="noResults" class="no-results-msg hidden">
+            <span>📺</span>
+            <p>No channels found matching your search</p>
+          </div>
+
+          <!-- Main Footer -->
+          <footer class="main-footer">
+            <div class="footer-content">
+              <div class="footer-info">
+                <span class="logo footer-logo">Alpha <span>TV</span></span>
+                <p class="developed-by">Website developed by <a href="https://github.com/Shariar-Ahamed" target="_blank" class="developer-name">Shariar Ahamed</a></p>
+              </div>
+              
+              <div class="footer-socials">
+                <a href="https://fb.com/shahriar.thebrowncat" target="_blank" title="Facebook" class="social-btn">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/shahriar_thebrowncat" target="_blank" title="Instagram" class="social-btn">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/shariarahamed" target="_blank" title="LinkedIn" class="social-btn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/ShariarAlways" target="_blank" title="Twitter" class="social-btn">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="mailto:shariaralways@gmail.com" title="Email" class="social-btn">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.ripon.engineer/" target="_blank" title="Website" class="social-btn">
+                  <i class="fa-solid fa-globe"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="footer-copyright">
+              © 2026 Alpha TV. All rights reserved.
+            </div>
+          </footer>
+        </div>
+      </main>
+
+    </div>
+
+    <!-- Custom Logic -->
+    <script src="script.js"></script>
+  </body>
+</html>

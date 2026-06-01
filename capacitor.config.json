@@ -1,0 +1,9 @@
+{
+  "appId": "com.alphatv.app",
+  "appName": "Alpha TV",
+  "webDir": "www",
+  "server": {
+    "allowNavigation": ["*"],
+    "allowMixedContent": true
+  }
+}
