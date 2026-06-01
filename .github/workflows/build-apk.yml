@@ -35,7 +35,7 @@ jobs:
 
       - name: Sync Capacitor Android
         run: |
-          npx cap sync
+          npx cap sync --verbose
 
       - name: Generate App Launcher Icons & Splash Screens
         run: |
