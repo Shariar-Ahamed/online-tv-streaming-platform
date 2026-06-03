@@ -101,6 +101,9 @@ https://yupptvcatchupire.yuppcdn.net/preview/starjalsha/1800.m3u8
 https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8
 #EXTINF:-1 tvg-logo="https://tvassets.roarzone.net/images/33.png" group-title="Indian Bangla, Bangla",SONY AATH
 https://edge2.roarzone.net:8447/roarzone/edge3/sonyaath/index.m3u8?token=571cbfa1fa2e6d2ce7d53975a8ae77afb5189d20-eb13b2ccb090084878804fb0e801091a-1780020920-1780010120
+
+#EXTINF:-1 tvg-logo="https://tvassets.roarzone.net/images/33.png" group-title="Indian Bangla, Bangla",SONY AATH
+https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8
 #EXTINF:-1 tvg-logo="https://tvassets.roarzone.net/images/29.png" group-title="Indian Bangla, Bangla",ZEE BANGLA CINEMA
 https://edge2.roarzone.net:8447/roarzone/edge3/zee_bangla_cinema/index.m3u8?token=33eb90cb5993505e7adebcdc9fe5a680f5ff40b4-89433e784e249e183a59446474d0fff1-1780020920-1780010120
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/pLH5YtWp/images.jpg" group-title="Bangla, Indian Bangla, Movies",Jalsha Movies HD
