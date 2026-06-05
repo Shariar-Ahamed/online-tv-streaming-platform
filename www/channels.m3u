@@ -91,6 +91,8 @@ http://198.195.239.50:8095/nagorik/index.m3u8
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="248000" tvg-name="Program Promo" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1778087459461.png" group-title="Infotainment, Bangla",Program Promo
 https://owrcovcrpy.gpcdn.net/bpk-tv/1720/output/index.m3u8
+#EXTINF:-1 tvg-name="FIFA+ Channel" tvg-logo="https://i.postimg.cc/TYJGfFL0/unnamed.webp" group-title="Sports",FIFA+ Channel
+https://37b4c228.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWZyX0ZJRkFQbHVzRnJlbmNoX0hMUw/6f5437c5-e015-4754-8476-c8c6d27d3a55/1.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/dbc585f70a60b9855b6e13a8ce4cb6f4" group-title="Sports, Bangla",T Sports HD
 https://tvsen7.aynaott.com/tsports-hd/index.m3u8?e=1779283784&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=3b4c5a2cfa872fa7f91ffbfb4aa0f658
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/dbc585f70a60b9855b6e13a8ce4cb6f4" group-title="Sports, Bangla",T Sports HD
@@ -237,8 +239,6 @@ https://live20.bozztv.com/giatvplayout7/giatv-210728/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-name="Mr Bean Animated" tvg-logo="https://i.postimg.cc/PxL7HjH2/download.jpg" group-title="Kids",Mr Bean Animated
 https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8
 
-#EXTINF:-1 tvg-name="FIFA+ Channel" tvg-logo="https://i.postimg.cc/TYJGfFL0/unnamed.webp" group-title="Sports",FIFA+ Channel
-https://37b4c228.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWZyX0ZJRkFQbHVzRnJlbmNoX0hMUw/6f5437c5-e015-4754-8476-c8c6d27d3a55/1.m3u8
 #EXTINF:-1 tvg-name="STAR SPORTS SELECT1 HD" tvg-logo="https://i.postimg.cc/4xc4h1x0/images.jpg" group-title="Sports",STAR SPORTS SELECT1 HD
 http://198.195.239.50:8095/StarSportsSelect1/index.m3u8
 #EXTINF:-1 tvg-name="STAR SPORTS SELECT2 HD" tvg-logo="https://i.postimg.cc/zXgYdGYT/images.jpg" group-title="Sports",STAR SPORTS SELECT2 HD
