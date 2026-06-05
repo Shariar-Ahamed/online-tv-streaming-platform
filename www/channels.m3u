@@ -214,6 +214,28 @@ https://tvsen6.aynaott.com/news24/index.m3u8?e=1780236742&u=78be6644-0a65-48ec-8
 https://tvsen6.aynaott.com/ekattorbdtv/index.m3u8?e=1780236742&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=90bb58d273c363faddeec219f67e8b03
 
 
+# ───────────  New Kids  ───────────
+
+#EXTINF:-1 tvg-name="Gopal Bhar TV" tvg-logo="https://i.ibb.co.com/5xSF5mzh/Gopal-Bhar-animated-TV-series-title-card.jpg" group-title="Cartoon",Gopal Bhar TV
+https://live20.bozztv.com/giatvplayout7/giatv-209611/tracks-v1a1/mono.ts.m3u8
+
+#EXTINF:-1 tvg-name="Motu Patlu" tvg-logo="https://imglink.cc/cdn/TxPUulKGQh.jpg" group-title="Cartoon",Motu Patlu
+https://live20.bozztv.com/giatvplayout7/giatv-209622/tracks-v1a1/mono.ts.m3u8
+
+#EXTINF:-1 tvg-name="Tom & Jerry TV" tvg-logo="https://imglink.cc/cdn/YkXRQgC4-_.jpg" group-title="Cartoon",Tom & Jerry TV
+https://live20.bozztv.com/giatvplayout7/giatv-208314/tracks-v1a1/mono.ts.m3u8
+
+#EXTINF:-1 tvg-name="Bantul The Great" tvg-logo="https://imglink.cc/cdn/_OIh6UYTpa.jpg" group-title="Cartoon",Bantul The Great
+https://live20.bozztv.com/giatvplayout7/giatv-209869/tracks-v1a1/mono.ts.m3u8
+
+#EXTINF:-1 tvg-name="Doraemon TV" tvg-logo="https://imglink.cc/cdn/rmNeL8f6NR.png" group-title="Cartoon",Doraemon TV
+https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8
+
+#EXTINF:-1 tvg-name="Oggy and the Cockroaches" tvg-logo="https://imglink.cc/cdn/cZxNWhHkaZ.jpg" group-title="Cartoon",Oggy and the Cockroaches
+https://live20.bozztv.com/giatvplayout7/giatv-210728/tracks-v1a1/mono.ts.m3u8
+
+#EXTINF:-1 tvg-name="Mr Bean Animated" tvg-logo="https://i.ibb.co.com/XfqV4B56/png-transparent-mr-bean-illustration-youtube-coloring-book-character-cartoon-mr-bean-television-chil.png" group-title="Cartoon",Mr Bean Animated
+https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8
 
 #EXTINF:-1 tvg-name="STAR SPORTS SELECT1 HD" tvg-logo="https://i.postimg.cc/4xc4h1x0/images.jpg" group-title="Sports",STAR SPORTS SELECT1 HD
 http://198.195.239.50:8095/StarSportsSelect1/index.m3u8
