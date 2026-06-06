@@ -2351,7 +2351,7 @@ video {
 }
 
 .banner-download-btn {
-  background: linear-gradient(135deg, #ff6d00 0%, #ff9e00 100%);
+  background: #ff6d00;
   color: white;
   font-size: 12.5px;
   font-weight: 700;
@@ -2380,7 +2380,7 @@ video {
 }
 
 .warning-app-download-btn {
-  background: linear-gradient(135deg, #ff6d00 0%, #ff9e00 100%) !important;
+  background: #ff6d00 !important;
   color: white !important;
   display: inline-flex;
   align-items: center;
@@ -2406,7 +2406,7 @@ video {
 .mode-3d .warning-app-download-btn {
   box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.65), -5px -5px 12px rgba(255, 255, 255, 0.06), inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
   border: none !important;
-  background: linear-gradient(135deg, #ff6d00 0%, #ff9e00 100%) !important;
+  background: #ff6d00 !important;
 }
 
 .mode-3d .warning-app-download-btn:hover {
