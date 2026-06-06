@@ -1087,6 +1087,20 @@ function checkForUpdates() {
     })
     .then(data => {
       if (data && data.buildCode && data.buildCode > currentBuildCode) {
+        // Check if the user clicked "Later" for this exact build code in the last 36 hours
+        const laterTime = localStorage.getItem("alpha_tv_update_later_time");
+        const laterBuild = localStorage.getItem("alpha_tv_update_later_build");
+        
+        if (laterBuild && parseInt(laterBuild) === data.buildCode && laterTime) {
+          const timeDiff = Date.now() - parseInt(laterTime);
+          const waitTime = 36 * 60 * 60 * 1000; // 36 hours in milliseconds
+          
+          if (timeDiff < waitTime) {
+            console.log("Update prompt skipped because user selected 'Later' in the last 36 hours.");
+            return;
+          }
+        }
+        
         showUpdateModal(data);
       }
     })
@@ -1101,6 +1115,9 @@ function showUpdateModal(updateData) {
   const downloadLink = document.getElementById("updateDownloadLink");
 
   if (!modal) return;
+
+  // Save the remote build code in a data-attribute so closeUpdateModal can access it
+  modal.dataset.updateBuild = updateData.buildCode;
 
   if (changelog && updateData.changelog) {
     changelog.innerHTML = "";
@@ -1130,5 +1147,12 @@ function closeUpdateModal() {
     modal.classList.add("hidden");
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+
+    // Save skip state in localStorage if we skip this update
+    const updateBuild = modal.dataset.updateBuild;
+    if (updateBuild) {
+      localStorage.setItem("alpha_tv_update_later_time", Date.now().toString());
+      localStorage.setItem("alpha_tv_update_later_build", updateBuild);
+    }
   }
 }
