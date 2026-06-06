@@ -71,28 +71,6 @@
             <div id="playerLoader" class="player-loader hidden">
               <div class="spinner"></div>
               <span>Buffering stream...</span>
-
-              <!-- Insecure Content Warning -->
-              <div id="insecureWarning" class="insecure-warning hidden">
-                <div class="insecure-warning-header">
-                  <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
-                  <h3>নিরাপত্তা সতর্কতা</h3>
-                </div>
-                <div class="insecure-warning-body">
-                  <p class="warning-main-text">এই চ্যানেলটি HTTP স্ট্রিম ব্যবহার করে, যা আপনার ব্রাউজারের নিরাপত্তা নীতির কারণে এখানে চালানো সম্ভব নয়।</p>
-                  <div class="warning-methods">
-                    <p class="methods-title">চ্যানেলটি দেখতে নিচের যেকোনো একটি পদ্ধতি অনুসরণ করুন:</p>
-                    <div class="method-item">
-                      <span class="method-number">পদ্ধতি ১:</span>
-                      <span class="method-desc">Browser Settings ➜ Site Settings ➜ Insecure Content ➜ Allow করে পেজটি পুনরায় লোড করুন।</span>
-                    </div>
-                    <div class="method-item">
-                      <span class="method-number">পদ্ধতি ২:</span>
-                      <span class="method-desc">আরও ভালো অভিজ্ঞতার জন্য আমাদের Android App ব্যবহার করুন।</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -514,6 +492,37 @@
         </div>
         <div class="custom-modal-footer">
           <button class="custom-modal-btn" onclick="closeInfoModal()">Got It</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Warning Popup Modal -->
+    <div id="warningModal" class="custom-modal hidden" aria-hidden="true">
+      <div class="custom-modal-overlay" onclick="closeWarningModal()"></div>
+      <div class="custom-modal-card warning-modal-card">
+        <button class="custom-modal-close-btn" onclick="closeWarningModal()" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="custom-modal-header warning-modal-header">
+          <i class="fa-solid fa-triangle-exclamation warning-modal-icon"></i>
+          <h2 id="warningModalTitle">নিরাপত্তা সতর্কতা</h2>
+        </div>
+        <div class="custom-modal-content warning-modal-content">
+          <p class="warning-main-text">এই চ্যানেলটি HTTP স্ট্রিম ব্যবহার করে, যা আপনার ব্রাউজারের নিরাপত্তা নীতির কারণে এখানে চালানো সম্ভব নয়।</p>
+          <div class="warning-methods">
+            <p class="methods-title">চ্যানেলটি দেখতে নিচের যেকোনো একটি পদ্ধতি অনুসরণ করুন:</p>
+            <div class="method-item">
+              <span class="method-number">পদ্ধতি ১:</span>
+              <span class="method-desc">Browser Settings ➜ Site Settings ➜ Insecure Content ➜ Allow করে পেজটি পুনরায় লোড করুন।</span>
+            </div>
+            <div class="method-item">
+              <span class="method-number">পদ্ধতি ২:</span>
+              <span class="method-desc">আরও ভালো অভিজ্ঞতার জন্য আমাদের Android App ব্যবহার করুন।</span>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal-footer">
+          <button class="custom-modal-btn warning-modal-btn" onclick="closeWarningModal()">Got It</button>
         </div>
       </div>
     </div>

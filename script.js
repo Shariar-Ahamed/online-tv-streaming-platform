@@ -366,17 +366,29 @@ function renderChannels() {
   });
 }
 
-/* SHOW BROWSER-ONLY HTTP INSECURE CONTENT WARNING */
+/* SHOW BROWSER-ONLY HTTP INSECURE CONTENT WARNING MODAL */
 function showHttpWarning() {
+  // Hide loading overlays
   const loader = document.getElementById("playerLoader");
-  const spinner = loader.querySelector(".spinner");
-  const span = loader.querySelector("span");
-  const warning = document.getElementById("insecureWarning");
+  if (loader) loader.classList.add("hidden");
 
-  if (spinner) spinner.classList.add("hidden");
-  if (span) span.classList.add("hidden");
-  if (warning) warning.classList.remove("hidden");
-  loader.classList.remove("hidden");
+  // Open warning modal
+  const modal = document.getElementById("warningModal");
+  if (modal) {
+    modal.classList.remove("hidden");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden"; // Disable body scroll
+  }
+}
+
+/* CLOSE WARNING MODAL */
+function closeWarningModal() {
+  const modal = document.getElementById("warningModal");
+  if (modal) {
+    modal.classList.add("hidden");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = ""; // Restore body scroll
+  }
 }
 
 /* RESET PLAYER LOADER TO NORMAL BUFFERING STATE */
@@ -384,14 +396,12 @@ function resetPlayerLoader() {
   const loader = document.getElementById("playerLoader");
   const spinner = loader.querySelector(".spinner");
   const span = loader.querySelector("span");
-  const warning = document.getElementById("insecureWarning");
 
   if (spinner) spinner.classList.remove("hidden");
   if (span) {
     span.classList.remove("hidden");
     span.innerText = "Buffering stream...";
   }
-  if (warning) warning.classList.add("hidden");
 }
 
 /* PLAY CHANNEL STREAM */
@@ -966,6 +976,7 @@ function closeInfoModal() {
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeInfoModal();
+    closeWarningModal();
   }
 });
 
