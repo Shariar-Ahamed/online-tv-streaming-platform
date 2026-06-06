@@ -2414,3 +2414,10 @@ video {
   transform: translateY(-2px) !important;
 }
 
+/* OFFICIAL BRAND GREEN FOR ANDROID ICON */
+.banner-download-btn .fa-android,
+.warning-app-download-btn .fa-android {
+  color: #3ddc84 !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+}
+
