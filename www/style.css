@@ -2185,8 +2185,6 @@ video {
 
 /* INSECURE CONTENT WARNING MODAL STYLE */
 .warning-modal-card {
-  border: 1px solid rgba(234, 67, 53, 0.35) !important;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(234, 67, 53, 0.15) !important;
   max-width: 480px !important;
 }
 
@@ -2200,20 +2198,20 @@ video {
 
 .warning-modal-icon {
   font-size: 24px;
-  color: #ea4335;
+  color: #fbbc05;
   animation: warningPulse 1.5s infinite alternate;
 }
 
 @keyframes warningPulse {
-  0% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(234, 67, 53, 0.4)); }
-  100% { transform: scale(1.15); filter: drop-shadow(0 0 8px rgba(234, 67, 53, 0.8)); }
+  0% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(251, 188, 5, 0.4)); }
+  100% { transform: scale(1.15); filter: drop-shadow(0 0 8px rgba(251, 188, 5, 0.8)); }
 }
 
 .warning-modal-header h2 {
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 700;
-  color: #ea4335 !important;
+  color: var(--text-primary) !important;
   margin: 0;
 }
 
@@ -2264,36 +2262,5 @@ video {
 
 .method-desc {
   color: var(--text-secondary);
-}
-
-.warning-modal-btn {
-  background: linear-gradient(135deg, #ea4335 0%, #ff7a00 100%) !important;
-  box-shadow: 0 0 15px rgba(234, 67, 53, 0.3) !important;
-}
-
-.warning-modal-btn:hover {
-  background: linear-gradient(135deg, #ff5746 0%, #ff8c1a 100%) !important;
-  box-shadow: 0 0 20px rgba(234, 67, 53, 0.5) !important;
-  transform: translateY(-1px);
-}
-
-/* 3D Neumorphic modal overrides */
-.mode-3d .warning-modal-card {
-  box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.8), -12px -12px 30px rgba(255, 255, 255, 0.04), inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
-  border: none !important;
-  background: #0f0b0f !important;
-}
-
-.mode-3d .warning-modal-btn {
-  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.65), -5px -5px 12px rgba(255, 255, 255, 0.06), inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
-  border: none !important;
-}
-.mode-3d .warning-modal-btn:hover {
-  box-shadow: 7px 7px 16px rgba(0, 0, 0, 0.7), -7px -7px 16px rgba(255, 255, 255, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.15) !important;
-  transform: translateY(-2px) !important;
-}
-.mode-3d .warning-modal-btn:active {
-  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.7), inset -4px -4px 8px rgba(255, 255, 255, 0.05) !important;
-  transform: translateY(0) !important;
 }
 
