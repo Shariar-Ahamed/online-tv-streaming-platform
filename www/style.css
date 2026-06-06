@@ -189,17 +189,17 @@ body {
 
 .logo {
   font-family: var(--font-poppins);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 28px;
   letter-spacing: -0.5px;
-  background: linear-gradient(to right, #4285F4 0%, #EA4335 25%, #FBBC05 50%, #34A853 75%, #4285F4 100%);
+  background: linear-gradient(to right, var(--secondary) 0%, var(--primary) 40%, var(--accent) 70%, var(--secondary) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   text-transform: uppercase;
-  filter: drop-shadow(0 0 10px rgba(66, 133, 244, 0.15));
-  animation: logoGradientFlow 5s linear infinite;
+  filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.25));
+  animation: logoGradientFlow 6s linear infinite;
 }
 
 @keyframes logoGradientFlow {
