@@ -11,32 +11,21 @@ https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.
 #EXTINF:-1 ,FIFA World Cup 2026 🇮🇳[coming]
 http://66.102.126.10:8000/play/a022/index.m3u8
 
-#EXTINF:-1 ,beIN sports Xtra
-https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
 #EXTINF:-1 ,ESPN
 http://cdn.tv-rds.workers.dev/ESPNARG.m3u8
-#EXTINF:-1 ,[Fighting] WWE Smackdown (ROXIE)
-https://601.formaturamaxi.com.br/wwe.m3u8
+
 #EXTINF:-1 ,Star Sports 2 Hindi HD (1080p)
 http://103.157.248.140:8000/play/a01m/index.m3u8
+
 #EXTINF:-1 ,Willow Sports (1080p)
 https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8
+
 #EXTINF:-1 ,SONY LIV
 http://live.balajibroadband.com:3500/live/892.m3u8
-#EXTINF:-1 ,Football World Cup 2026
-https://tvsen5.aynaott.com/PtvSports/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 ,DAZN COMBAT
-https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8
+
 #EXTINF:-1 ,Star Sports 1 Hindi
 http://103.157.248.140:8000/play/a00g/index.m3u8
-#EXTINF:-1 ,Star Sports 1 HD
-https://tvsen7.aynaott.com/sspts1/index.m3u8
-#EXTINF:-1 ,STAR SPORTS KHEL
-http://103.175.73.12:8080/live/151/151_0.m3u8
-#EXTINF:-1 ,Trace Sport
-https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8
-#EXTINF:-1 ,SKY SPORTS ACTION
-http://6zirt9yx.otttv.pw/iptv/HEGN4VXXQQSYCA/9155/index.m3u
+
 #EXTINF:-1 ,Hub Sports 2 HD
 http://tv-premium-pro.com/live/wezqqszfr2/i7481xvrdf/280823.m3u8
 #EXTINF:-1 ,Hub Sports 3 HD
@@ -463,8 +452,6 @@ http://103.175.73.12:8080/live/155/155_0.m3u8
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
 #EXTINF:-1 ,Surongo
 https://pub-d8f5af7f053343ed8295b16a145f6c1c.r2.dev/siam/[FGBDVibes]Surongo.(2023).480p.mkv
-#EXTINF:-1 ,Music India
-http://103.175.73.12:8080/live/158/158_0.m3u8
 #EXTINF:-1 ,E24
 http://103.175.73.12:8080/live/159/159_0.m3u8
 #EXTINF:-1 ,Antarjal

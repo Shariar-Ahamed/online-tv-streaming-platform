@@ -160,6 +160,8 @@ https://tvsen6.aynaott.com/btvhd/index.m3u8?e=1780236741&u=78be6644-0a65-48ec-81
 https://tvsen6.aynaott.com/btv_world/index.m3u8?e=1780236741&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=2cdb0f57de7238d2f0f43b01d518820f
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/80424ce0682e14e7d51e28de33d5f380" group-title="Musics",Sangeet Bangla
 https://cdn-4.pishow.tv/live/1143/master.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/yxHDgzn7/images.jpg" group-title="Musics",Music India
+http://103.175.73.12:8080/live/158/158_0.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/b28173a251bda1357f9884ca7eef7b89" group-title="News",ABC 7 Bay
 https://content.uplynk.com/channel/ext/4413701bf5a1488db55b767f8ae9d4fa/kgo_24x7_news.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/065af1ce1aa68d9d96c27050a8125413" group-title="News",ABC News
@@ -253,16 +255,24 @@ http://198.195.239.50:8095/StarSportsSelect2/index.m3u8
 http://198.195.239.50:8095/SonyTenSports5/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/KYz13MCB/images.jpg" group-title="Sports",STAR SPORTS 1HD 2
 https://tvsen7.aynaott.com/sspts1/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-name="A Sports" tvg-logo="https://i.postimg.cc/GmnPDqjT/download.jpg" group-title="Sports",A Sports
-http://198.195.239.50:8095/Eurosport/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/KYz13MCB/images.jpg" group-title="Sports",STAR SPORTS 1HD 3
+https://tvsen7.aynaott.com/sspts1/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/BbxBhn29/images.jpg" group-title="Sports",Star Sports 1 HD
 http://41.205.93.154/STARSPORTS1/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/BbxBhn29/images.jpg" group-title="Sports",STAR SPORTS KHEL
+http://103.175.73.12:8080/live/151/151_0.m3u8
+#EXTINF:-1 tvg-name="A Sports" tvg-logo="https://i.postimg.cc/GmnPDqjT/download.jpg" group-title="Sports",A Sports
+http://198.195.239.50:8095/Eurosport/index.m3u8
 #EXTINF:-1 tvg-name="REAL MADRID TV" tvg-logo="https://i.postimg.cc/yxfPT7rC/172735216318-logo-vertical-negativo-1.jpg" group-title="Sports",REAL MADRID TV
 https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/kGBmsgXK/images.png" group-title="Sports",BEIN SPORT EXTRA Ñ 🇪🇸
 https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/kGBmsgXK/images.png" group-title="Sports",BEIN SPORT EXTRA Ñ 🇪🇸
+https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/0j1RkG3v/IDMAN-TV.jpg" group-title="Sports",IDMANTV 🇹🇷
 https://str2.yodacdn.net/idman_300_to_small/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/XJhgTXVL/download.png" group-title="Sports",SKY SPORTS ACTION
+http://6zirt9yx.otttv.pw/iptv/HEGN4VXXQQSYCA/9155/index.m3u
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/xT8MBq05/image.png" group-title="Sports",SKY SPORT LALIGA 🇲🇽
 http://179.60.224.196:8000/play/a0i7/index.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/a3d1a4112bc7c6ee337871b58449542c" group-title="Sports",TNT Sport 1
@@ -273,6 +283,8 @@ https://jmp2.uk/stvp-ATAJ0500433A
 http://198.195.239.50:8095/SonyTenSports2/index.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/9d9d7cbfba5a8ceea648bbd963ad1014" group-title="Sports",PTV Sports
 https://tvsen5.aynaott.com/PtvSports/index.m3u8?e=1780236743&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=76f74dfc4bdff676d7ce6ad4070d1761
+#EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/9d9d7cbfba5a8ceea648bbd963ad1014" group-title="Sports",PTV Sports
+https://tvsen5.aynaott.com/PtvSports/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/k4359Q2w/image.png" group-title="Sports",2TV Sport 🇳🇴
 https://tv.cdn.xsg.ge/gpb-2tv/index.m3u8
 
@@ -349,6 +361,12 @@ https://nomawnoijl.gpcdn.net/akash/fighter/playlist.m3u8
 https://nomawnoijl.gpcdn.net/akash/crazy_ex/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/wMP1jdC5/images.png" group-title="Sports",Euro Sports
 https://stream.ottplus.bd/live/euro_sports_hd_abr/live/euro_sports_hd/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/V6JxqQSd/images.png" group-title="Sports",WWE Smackdown (ROXIE)
+https://601.formaturamaxi.com.br/wwe.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/gk1n8mxb/download.png" group-title="Sports",DAZN COMBAT
+https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/B6vKNNsL/images.png" group-title="Sports",Trace Sport
+https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/495e1816602db61aa4c2a348a257bd0a" group-title="Other",Goal TV
 https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/294b72dc2ca7b74ab3312059728cab22" group-title="Other",pix 11
