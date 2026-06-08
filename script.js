@@ -168,7 +168,7 @@ function loadPlaylist() {
   loader.classList.remove("hidden");
   loader.querySelector("span").innerText = "Loading playlist...";
 
-  fetch(playlistOnline)
+  fetch(`${playlistOnline}?t=${new Date().getTime()}`)
     .then(response => {
       if (!response.ok) {
         throw new Error("Online playlist response error");
