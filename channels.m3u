@@ -479,6 +479,12 @@ https://tiger-hub.vercel.app@vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-15
 http://198.195.239.50:8095/Discovery/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/brhDrNbS/download.png" group-title="Entertainment, English",NATIONAL GEOGRAPHIC HD
 http://198.195.239.50:8095/NationalGeographic/index.m3u8
+#EXTINF:-1 tvg-name="Discovery HD" tvg-logo="https://i.postimg.cc/0jFVSCjT/download.jpg" group-title="Entertainment, English",Discovery HD Arabic
+https://svs.itworkscdn.net/asharqdiscoverylive/asharqd.smil/playlist_dvr.m3u8
+#EXTINF:-1 tvg-name="ACCU WEATHER" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png" group-title="English",ACCU WEATHER
+https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00684-accuweather-accuweather-plex/playlist.m3u8?v=1
+#EXTINF:-1 tvg-name="Amazon SAT" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png" group-title="Entertainment, English",Amazon SAT
+https://amazonsat.brasilstream.com.br/hls/amazonsat/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/4xL8rnHv/download.png" group-title="Entertainment",Discover Pakistan TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/discoverpakistan.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/52ztYQqW/images.jpg" group-title="Entertainment",Minimax
@@ -685,3 +691,4 @@ https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg0
 # (NEW)
 #EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/e15930189f48df6d429c269bd1edea99" group-title="Kids",PBS Kids
 https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/playlist.m3u8
+

@@ -1,4 +1,5 @@
 /* VARIABLES */
+// const playlistOnline = "channels.m3u";
 const playlistOnline = "https://raw.githubusercontent.com/Shariar-Ahamed/online-tv-streaming-platform/main/channels.m3u";
 const playlistLocal = "channels.m3u";
 
