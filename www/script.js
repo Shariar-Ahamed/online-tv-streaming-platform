@@ -135,6 +135,8 @@ function setupPlayerSync() {
   const video = document.getElementById("video");
   const playPauseBtn = document.querySelector(".play-pause-btn");
 
+  if (!video || !playPauseBtn) return;
+
   video.addEventListener("play", () => {
     playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
     if (window.AndroidPiP) {
@@ -160,6 +162,7 @@ function setupPlayerSync() {
 /* VOLUME & MUTE CONTROL LOGIC */
 function setupVolumeControl() {
   const video = document.getElementById("video");
+  if (!video) return;
   const isMutedSaved = localStorage.getItem("alpha_tv_muted") === "true";
   video.muted = isMutedSaved;
   updateVolumeButtonState(isMutedSaved);
@@ -196,6 +199,8 @@ function setupControlAutohide() {
   const playerWrapper = document.querySelector(".player-wrapper");
   const controls = document.getElementById("customControls");
 
+  if (!playerWrapper || !controls) return;
+
   function showControls() {
     controls.classList.add("visible");
     clearTimeout(controlsTimeout);
@@ -212,6 +217,7 @@ function setupControlAutohide() {
 /* LOAD M3U PLAYLIST */
 function loadPlaylist() {
   const loader = document.getElementById("playerLoader");
+  if (!loader) return;
   loader.classList.remove("hidden");
   loader.querySelector("span").innerText = "Loading playlist...";
 
