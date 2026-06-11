@@ -19,6 +19,7 @@ try {
 }
 let searchKeyword = "";
 let currentHls = null;
+let hlsInitInterval = null;
 let controlsTimeout;
 
 /* ON INITIALIZATION */
@@ -582,6 +583,12 @@ function resetPlayerLoader() {
 function playChannel(index) {
   if (index < 0 || index >= filteredChannels.length) return;
 
+  // Clear any pending HLS loading intervals
+  if (hlsInitInterval) {
+    clearInterval(hlsInitInterval);
+    hlsInitInterval = null;
+  }
+
   const video = document.getElementById("video");
   const loader = document.getElementById("playerLoader");
   const channel = filteredChannels[index];
@@ -600,7 +607,7 @@ function playChannel(index) {
     currentHls = null;
   }
 
-  if (Hls.isSupported()) {
+  if (typeof Hls !== "undefined" && Hls.isSupported()) {
     currentHls = new Hls({
       maxMaxBufferLength: 10,
       enableWorker: true
@@ -674,6 +681,18 @@ function playChannel(index) {
       });
     });
   } else {
+    // If HLS library is not loaded yet, wait and retry
+    if (typeof Hls === "undefined") {
+      loader.querySelector("span").innerText = "Initializing player...";
+      hlsInitInterval = setInterval(() => {
+        if (typeof Hls !== "undefined") {
+          clearInterval(hlsInitInterval);
+          hlsInitInterval = null;
+          playChannel(index);
+        }
+      }, 100);
+      return;
+    }
     loader.querySelector("span").innerText = "HLS stream format not supported";
     return;
   }
