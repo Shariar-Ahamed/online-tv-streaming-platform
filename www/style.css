@@ -195,6 +195,7 @@ body {
   background: linear-gradient(to right, var(--secondary) 0%, var(--primary) 40%, var(--accent) 70%, var(--secondary) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   text-transform: uppercase;
@@ -319,6 +320,7 @@ video {
   background: linear-gradient(90deg, #ff6d00, #ffffff, var(--secondary));
   background-size: 200% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: var(--font-display);
   font-weight: 600;
@@ -831,6 +833,7 @@ video {
   padding: 1px;
   background: linear-gradient(135deg, var(--primary), var(--accent));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
@@ -1302,6 +1305,7 @@ video {
 .social-btn.instagram i {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
