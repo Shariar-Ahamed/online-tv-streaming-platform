@@ -1,18 +1,23 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="T Sports" tvg-logo="https://i.postimg.cc/661Rm2z8/image.png" group-title="FIFA 2026",T Sports
-http://103.59.176.72:8083/live1/tracks-v1a1/mono.m3u8?token=123
+#http://103.59.176.72:8083/live1/tracks-v1a1/mono.m3u8?token=123
+
 #EXTINF:-1 tvg-name="Bein Sports 1" tvg-logo="https://i.postimg.cc/661Rm2z8/image.png" group-title="FIFA 2026",Bein Sports 1
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
 #EXTINF:-1 tvg-name="WIN Sports" tvg-logo="https://i.postimg.cc/661Rm2z8/image.png" group-title="FIFA 2026",WIN Sports
 https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8
 #EXTINF:-1 tvg-name="Caze TV" tvg-logo="https://i.postimg.cc/661Rm2z8/image.png" group-title="FIFA 2026",Caze TV
 https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8
+
+
 # #EXTINF:-1 tvg-name="T sports HD" tvg-logo="https://i.postimg.cc/661Rm2z8/image.png" group-title="FIFA 2026",T sports HD
 # https://amitomar.bdixbd.net/hoichoi.pro1/tracks-v1a1/index.m3u8
 # #EXTINF:-1 tvg-name="T sports HD 2" tvg-logo="https://i.postimg.cc/661Rm2z8/image.png" group-title="FIFA 2026",T sports HD 2
 # http://103.151.61.12/T-Sports.kutta/video.m3u8
 # #EXTINF:-1 tvg-name="PTV Sports" tvg-logo="https://i.postimg.cc/661Rm2z8/image.png" group-title="FIFA 2026",PTV Sports
 # http://203.18.159.180/t.me/BDIX_Bypass_josh_RamboBeIN_Sports_5_7L6a9O2p75/index.m3u8
+
+
 #EXTINF:-1 tvg-id="132000" tvg-name="Channel I HD" tvg-logo="https://s3.aynaott.com/storage/8e998f20a9cc52cb8eb1f52a5bf38204" group-title="Entertainment, Bangla",Channel I HD
 https://owrcovcrpy.gpcdn.net/bpk-tv/1723/output/index.m3u8
 #EXTINF:-1 tvg-id="97000" tvg-name="Jamuna TV" tvg-logo="https://s3.aynaott.com/storage/aac6488b68844e5756ab46eb79659de8" group-title="News, Bangla",Jamuna TV

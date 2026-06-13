@@ -1,6 +1,8 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="T Sports" tvg-logo="https://i.postimg.cc/661Rm2z8/image.png" group-title="FIFA 2026",T Sports
-http://103.59.176.72:8083/live1/tracks-v1a1/mono.m3u8?token=123
+#http://103.59.176.72:8083/live1/tracks-v1a1/mono.m3u8?token=123
+
+
 #EXTINF:-1 tvg-name="Bein Sports 1" tvg-logo="https://i.postimg.cc/661Rm2z8/image.png" group-title="FIFA 2026",Bein Sports 1
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
 #EXTINF:-1 tvg-name="WIN Sports" tvg-logo="https://i.postimg.cc/661Rm2z8/image.png" group-title="FIFA 2026",WIN Sports
